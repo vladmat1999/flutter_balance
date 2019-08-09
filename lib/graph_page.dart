@@ -32,7 +32,8 @@ class GraphPageState extends State<GraphPage>
 
   @override
   Widget build(BuildContext context) {
-
+    minPoint = minPoint ?? 0;
+    maxPoint = maxPoint ?? 10;
 
     var series = [
       new Series(
@@ -48,22 +49,7 @@ class GraphPageState extends State<GraphPage>
         title: Text("Details"),
       ),
       backgroundColor: Colors.white,
-      body: Center(child: Column(
-        children: <Widget>[
-          Container(
-            height: MediaQuery.of(context).size.height / 3,
-            width: MediaQuery.of(context).size.width * 0.9,
-            child: LineChart(series, 
-            animate: true,
-            domainAxis: NumericAxisSpec(
-              viewport: NumericExtents(minPoint, maxPoint),
-              showAxisLine: true,
-            ),
-            behaviors: [PanAndZoomBehavior()],
-            )
-          ),
-          Expanded(
-            child: FutureBuilder<List<TableEntry>>(
+      body: FutureBuilder<List<TableEntry>>(
               future: dbHelper.getEntries(),
 
               builder: (context, snapshot) {
@@ -74,9 +60,25 @@ class GraphPageState extends State<GraphPage>
 
                 var newData = snapshot.data.reversed.toList();
 
-                return ListView.builder(
-                  controller: _controller,
-                  itemBuilder: (context, i) {
+                return Center(child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: MediaQuery.of(context).size.height / 3,
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      child: LineChart(series, 
+                      animate: true,
+                      domainAxis: NumericAxisSpec(
+                        viewport: NumericExtents.fromValues([minPoint, maxPoint]),
+                        showAxisLine: true,
+                      ),
+                      behaviors: [PanAndZoomBehavior()],
+                      )
+                    ),
+
+                    Expanded(
+                      child: ListView.builder(
+                            controller: _controller,
+                            itemBuilder: (context, i) {
                     
                     if(i ~/ 2 >= newData.length)
                       return null;
@@ -141,17 +143,18 @@ class GraphPageState extends State<GraphPage>
                         
                       ],
                     )
-                    );},
+                    );
+                  },
+                ),
+                )
+                ]
+                )
                 );
-                }
-              ),
-          )
-        ],
-        )
 
-            )
-         );
-        }
+                },
+                )    
+                );
+  }
 
   String formatAmount(double amount)
   {
@@ -177,7 +180,10 @@ class GraphPageState extends State<GraphPage>
     
     setState(() {
      maxPoint = te.length;
-     minPoint = te.length - 10 > 0 ? te.length - 10 : 0;
+     minPoint = maxPoint - 10 > 0 ? maxPoint - 10 : 0;
+
+     print("asd" + maxPoint.toString());
+     print("min" + minPoint.toString());
 
      data = List.generate(te.length, (i){
        return GraphPoint(i,te[i].ballance);
