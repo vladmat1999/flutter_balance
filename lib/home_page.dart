@@ -36,7 +36,7 @@ class TestPage extends State<HomePage> with SingleTickerProviderStateMixin{
   var textAl = Alignment.bottomCenter;
   var textColor = Colors.black;
   var screenText = "0";
-  var sign = 1;
+  var sign = -1;
   var input = "0";
   var currentBallance = 0.0;
   var state = 0;
@@ -58,6 +58,15 @@ class TestPage extends State<HomePage> with SingleTickerProviderStateMixin{
     controller.addListener(() {
       setState(() {
        rotationAmount = controller.page * 2 - 1;
+
+      sign = controller.page > 0.5 ? 1 : -1;
+      
+       if(state == 1)
+       {
+        if(screenText[0] != (sign >= 0 ? '+' : '-'))
+          screenText = (sign > 0 ? '+' : '-') + screenText.substring(1);
+       }
+       
       });
     });
   }
@@ -210,9 +219,15 @@ class TestPage extends State<HomePage> with SingleTickerProviderStateMixin{
                 Container(
                   child: RotationTransition(
                     turns: new AlwaysStoppedAnimation(rotationAmount / 4),
-                    child: Icon(
-                      Icons.last_page,
+                    child: IconButton(
+                      icon: Icon(Icons.last_page),
                       color: Colors.black,
+                      onPressed: (){
+                        var page = sign >= 0 ? 0 : 1;
+                        setState(() {
+                         controller.animateToPage(page, duration: Duration(milliseconds: 500), curve: Curves.easeOutExpo); 
+                        });
+                      },
                     )
                   ),
                   padding: EdgeInsets.only(right: 5),
@@ -318,6 +333,9 @@ class TestPage extends State<HomePage> with SingleTickerProviderStateMixin{
     if(s == '.' && input.length == 0)
       input += '0';
 
+    if(s != "." && input == "0")
+      input += '.';
+
     setState(() {
       if (input != "")
         input += s;
@@ -413,7 +431,7 @@ class TestPage extends State<HomePage> with SingleTickerProviderStateMixin{
       if(input == "0")
         return;
       double text = double.parse(input);
-      print(text);
+
       if(text != 0)
       {
         double amount = checkSign() * text;
@@ -455,8 +473,8 @@ class TestPage extends State<HomePage> with SingleTickerProviderStateMixin{
     } else 
     {
       textAl = Alignment.bottomRight;
-      screenText = input;
       textColor = Colors.black;
+      screenText = (sign > 0 ? "+" : '-') + input;
     }
     getDeleteButton(state);
   }
