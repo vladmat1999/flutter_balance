@@ -1,5 +1,17 @@
 [
     {
+        "merged": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\launcher_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\launcher_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\res\\merged\\release\\mipmap-mdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\android\\app\\src\\main\\res\\mipmap-mdpi\\launcher_icon.png"
+    },
+    {
         "merged": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\res\\merged\\release\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
@@ -14,6 +26,14 @@
     {
         "merged": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xhdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\android\\app\\src\\main\\res\\mipmap-xhdpi\\launcher_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\res\\merged\\release\\mipmap-hdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\android\\app\\src\\main\\res\\mipmap-hdpi\\launcher_icon.png"
     },
     {
         "merged": "C:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_ic_launcher.png.flat",

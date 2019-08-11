@@ -2,6 +2,9 @@ dev_dependencies:
   flutter_launcher_icons: "^0.7.2"
   
 flutter_icons:
-  android: "launcher_icon" 
   ios: true
-  image_path: "assets/icon.png"
+  android: true
+  image_path_ios: "assets/Icons/icon.png"
+  image_path_android: "assets/Icons/icon.png"
+  adaptive_icon_background: "assets/Icons/background.png"
+  adaptive_icon_foreground: "assets/Icons/foreground.png"
