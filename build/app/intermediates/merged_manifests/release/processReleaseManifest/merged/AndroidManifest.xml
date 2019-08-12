@@ -24,7 +24,7 @@
     -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:icon="@mipmap/launcher_icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="Bet Calculator" >
         <activity
             android:name="com.example.slotscounter.MainActivity"

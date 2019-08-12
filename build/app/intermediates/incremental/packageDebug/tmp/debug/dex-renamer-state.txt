@@ -1,4 +1,4 @@
-#Mon Aug 12 00:27:33 EEST 2019
+#Mon Aug 12 14:12:38 EEST 2019
 base.0=C\:\\Users\\vladm\\Desktop\\FlutterApp\\slots_counter\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

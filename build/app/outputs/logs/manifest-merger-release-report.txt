@@ -32,7 +32,7 @@ ADDED from C:\Users\vladm\Desktop\FlutterApp\slots_counter\android\app\src\main\
 	android:label
 		ADDED from C:\Users\vladm\Desktop\FlutterApp\slots_counter\android\app\src\main\AndroidManifest.xml:20:9-39
 	android:icon
-		ADDED from C:\Users\vladm\Desktop\FlutterApp\slots_counter\android\app\src\main\AndroidManifest.xml:21:9-45
+		ADDED from C:\Users\vladm\Desktop\FlutterApp\slots_counter\android\app\src\main\AndroidManifest.xml:21:9-43
 	android:name
 		ADDED from C:\Users\vladm\Desktop\FlutterApp\slots_counter\android\app\src\main\AndroidManifest.xml:19:9-57
 activity#com.example.slotscounter.MainActivity

@@ -217,8 +217,8 @@ class TestPage extends State<HomePage> with SingleTickerProviderStateMixin{
                 ),
                 
                 Container(
-                  child: RotationTransition(
-                    turns: new AlwaysStoppedAnimation(rotationAmount / 4),
+                  child: Transform.rotate(
+                    angle: rotationAmount *1.55,
                     child: IconButton(
                       icon: Icon(Icons.last_page),
                       color: Colors.black,
