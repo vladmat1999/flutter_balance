@@ -92,8 +92,6 @@ class TableEntry
   final DateTime date;
   final double amount;
   final double ballance;
-  ///The location string is not used yet, but it is there for 
-  ///future updates
   final String location;
 
   TableEntry({this.id, this.date, this.amount, this.ballance, this.location});
