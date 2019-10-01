@@ -75,7 +75,7 @@ class TestPage extends State<HomePage> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Ballance"),
+        title: Text("Balance"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.show_chart),

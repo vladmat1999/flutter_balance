@@ -1,3 +1,6 @@
+///The graph_page builds the page presenting the
+///graph and transaction breakdown
+
 import 'package:flutter/material.dart';
 import 'database_utils.dart';
 import 'package:charts_flutter/flutter.dart';
@@ -12,7 +15,11 @@ class GraphPage extends StatefulWidget
 
 class GraphPageState extends State<GraphPage>
 {
-  final dbHelper = DatabaseHelper.instance;
+  ///This will be used to access nd perform operations on the database
+  final dbHelper = DatabaseHelper.instance;  
+
+  ///This part of the code is used to control the initial zoom and pan
+  ///on the graph. It plots a ingle grph point 
   List<ListTile> entries = <ListTile>[];
   var data = [
     GraphPoint(0,0),
@@ -55,7 +62,7 @@ class GraphPageState extends State<GraphPage>
               builder: (context, snapshot) {
                 if (!snapshot.hasData) return Center(child: CircularProgressIndicator());
 
-                //_controller.addListener(_scrollListener());
+                //s_controller.addListener(_scrollListener());
                 //_controller.addListener(_scrollListener());
 
                 var newData = snapshot.data.reversed.toList();
@@ -146,14 +153,14 @@ class GraphPageState extends State<GraphPage>
                     );
                   },
                 ),
-                )
-                ]
-                )
-                );
+              )
+            ]
+          )
+        );
 
-                },
-                )    
-                );
+      },
+    )    
+    );
   }
 
   String formatAmount(double amount)
